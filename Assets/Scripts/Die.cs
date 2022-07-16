@@ -12,10 +12,9 @@ public class Die : MonoBehaviour {
 	private MeshCollider meshCollider;
 
 	private void Awake() {
+		//Mesh dieMesh = PersistentSettings.useDefaultMesh ? defaultMesh : PersistentSettings.dieMesh;
 
-		Mesh dieMesh = PersistentSettings.useDefaultMesh ? defaultMesh : PersistentSettings.dieMesh;
-
-		meshFilter.mesh = dieMesh;
-		meshCollider.sharedMesh = dieMesh;
+		//meshFilter.mesh = dieMesh;
+		//meshCollider.sharedMesh = dieMesh;
 	}
 }
