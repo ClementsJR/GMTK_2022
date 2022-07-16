@@ -27,7 +27,8 @@ public class MenuController : MonoBehaviour {
 
 	public void SelectDie(Mesh dieMesh) {
 		PersistentSettings.dieMesh = dieMesh;
-		SceneManager.LoadScene("Test Scene");
+		PersistentSettings.useDefaultMesh = false;
+		SceneManager.LoadScene("Level 1");
 	}
 
 	public void InstructionsBtnClicked() {
