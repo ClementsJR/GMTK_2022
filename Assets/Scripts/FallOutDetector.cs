@@ -9,9 +9,19 @@ public class FallOutDetector : MonoBehaviour {
 	[SerializeField]
 	private DieSpawner dieSpawner;
 
+	private Transform die;
+	private Rigidbody dieBody;
+
+	private void Start() {
+		die = dieSpawner.die.transform;
+		dieBody = die.GetComponent<Rigidbody>();
+	}
+
 	private void OnTriggerExit(Collider other) {
 		if (other == dieSpawner.dieCollider) {
-			dieSpawner.die.transform.position = spawnPosition.position;
+			die.position = spawnPosition.position;
+			dieBody.angularVelocity = Vector3.zero;
+			dieBody.velocity = Vector3.zero;
 		}
 	}
 }

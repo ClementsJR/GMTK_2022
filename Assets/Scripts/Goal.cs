@@ -8,14 +8,8 @@ public class Goal : MonoBehaviour {
 	[SerializeField]
 	private DieSpawner dieSpawner;
 
-	private bool acceptEvents = true;
-
 	private void OnTriggerEnter(Collider other) {
-		if (acceptEvents && other == dieSpawner.dieCollider)
+		if (LevelManager.inPlay && other == dieSpawner.dieCollider)
 			levelManager.NotifyGoalReached();
-	}
-
-	public void StopAcceptingEvents() {
-		acceptEvents = false;
 	}
 }

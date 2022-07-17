@@ -16,12 +16,9 @@ public class LevelManager : MonoBehaviour {
 	[SerializeField]
 	private TextMeshProUGUI scoreLabel;
 
-	[SerializeField]
-	private GroundRotator rotator;
-	[SerializeField]
-	private Goal goal;
-	
-    private void Update() {
+	public static bool inPlay = true;
+
+	private void Update() {
 		if (runLevelTimer)
 			UpdateTimerLabel();
     }
@@ -38,11 +35,11 @@ public class LevelManager : MonoBehaviour {
 		levelEndScreen.SetActive(true);
 		scoreLabel.text = "Total Time\n" + levelTimer.ToString("F2");
 
-		rotator.StopAcceptingEvents();
-		goal.StopAcceptingEvents();
+		LevelManager.inPlay = false;
 	}
 
 	public void LoadScene(string nextScene) {
+		LevelManager.inPlay = true;
 		SceneManager.LoadScene(nextScene);
 	}
 }

@@ -15,6 +15,7 @@ public class DieRotator : MonoBehaviour {
 
 		Vector3 rotation = new Vector3(deltaPitch, 0.0f, deltaRoll);
 
-		rigidBody.AddTorque(rotation);
+		if (LevelManager.inPlay)
+			rigidBody.AddTorque(rotation);
 	}
 }
