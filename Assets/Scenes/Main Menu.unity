@@ -1098,8 +1098,8 @@ MonoBehaviour:
         m_MethodName: SelectDie
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1783118940250960568, guid: eb0b9d86d32999e459fb65a2b5b74b5b, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Mesh, UnityEngine
+          m_ObjectArgument: {fileID: 1305674708020087519, guid: f8f34e53653e6b9409f14297908482e4, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1852,8 +1852,8 @@ MonoBehaviour:
         m_MethodName: SelectDie
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 6553228938470455548, guid: 790f2ac03da1b6440a7b52f25525aebd, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Mesh, UnityEngine
+          m_ObjectArgument: {fileID: 2136821112782365058, guid: 44ebf2d052b1ca3408facf06b7d413c9, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2429,8 +2429,8 @@ MonoBehaviour:
         m_MethodName: SelectDie
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: -8049292495768022167, guid: 7466ab7a3d7ffb449acb7cf00a5c1179, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Mesh, UnityEngine
+          m_ObjectArgument: {fileID: 6576935402750224101, guid: 728d660e967bd3b4b993c27ee7165a2e, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2539,9 +2539,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4dbf0cbd14967a4cb122d798220256f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  d6Mesh: {fileID: 6553228938470455548, guid: 790f2ac03da1b6440a7b52f25525aebd, type: 3}
-  d12Mesh: {fileID: -8049292495768022167, guid: 7466ab7a3d7ffb449acb7cf00a5c1179, type: 3}
-  d20Mesh: {fileID: 1783118940250960568, guid: eb0b9d86d32999e459fb65a2b5b74b5b, type: 3}
   menuScreen: {fileID: 762229489}
   dieSelectScreen: {fileID: 576666353}
   instructionsScreen: {fileID: 107795727}

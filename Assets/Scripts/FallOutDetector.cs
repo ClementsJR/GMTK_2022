@@ -7,11 +7,11 @@ public class FallOutDetector : MonoBehaviour {
 	[SerializeField]
 	private Transform spawnPosition;
 	[SerializeField]
-	private Collider die;
+	private DieSpawner dieSpawner;
 
 	private void OnTriggerExit(Collider other) {
-		if (other == die) {
-			die.transform.position = spawnPosition.position;
+		if (other == dieSpawner.dieCollider) {
+			dieSpawner.die.transform.position = spawnPosition.position;
 		}
 	}
 }

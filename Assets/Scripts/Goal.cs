@@ -8,10 +8,10 @@ public class Goal : MonoBehaviour {
 	[SerializeField]
 	private string nextLevel;
 	[SerializeField]
-	private Collider die;
+	private DieSpawner dieSpawner;
 
 	private void OnTriggerEnter(Collider other) {
-		if(other == die)
+		if(other == dieSpawner.dieCollider)
 			SceneManager.LoadScene(nextLevel);
 	}
 }

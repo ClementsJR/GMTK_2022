@@ -5,10 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour {
 
-	public Mesh d6Mesh;
-	public Mesh d12Mesh;
-	public Mesh d20Mesh;
-
 	public GameObject menuScreen;
 	public GameObject dieSelectScreen;
 	public GameObject instructionsScreen;
@@ -25,9 +21,9 @@ public class MenuController : MonoBehaviour {
 		selectDice.SetActive(true);
 	}
 
-	public void SelectDie(Mesh dieMesh) {
-		PersistentSettings.dieMesh = dieMesh;
-		PersistentSettings.useDefaultMesh = false;
+	public void SelectDie(GameObject diePrefab) {
+		PersistentSettings.diePrefab = diePrefab;
+		PersistentSettings.useDefaultDie = false;
 		SceneManager.LoadScene("Level 1");
 	}
 

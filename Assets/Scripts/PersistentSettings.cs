@@ -3,6 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PersistentSettings : MonoBehaviour {
-	public static Mesh dieMesh;
-	public static bool useDefaultMesh = true;
+	public static GameObject diePrefab;
+	public static bool useDefaultDie = true;
 }

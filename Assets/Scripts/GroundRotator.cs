@@ -5,6 +5,7 @@ using UnityEngine;
 public class GroundRotator : MonoBehaviour {
 
 	[SerializeField]
+	private DieSpawner dieSpawner;
 	private Transform die;
 
 	[SerializeField]
@@ -19,6 +20,8 @@ public class GroundRotator : MonoBehaviour {
 	private PIDController rollPID;
 
 	private void Start() {
+		die = dieSpawner.die.transform;
+
 		pitchPID = new PIDController(pidGains);
 		rollPID = new PIDController(pidGains);
 	}
