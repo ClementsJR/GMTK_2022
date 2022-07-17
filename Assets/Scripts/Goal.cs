@@ -1,17 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Goal : MonoBehaviour {
-
 	[SerializeField]
-	private string nextLevel;
+	private LevelManager levelManager;
 	[SerializeField]
 	private DieSpawner dieSpawner;
 
+	private bool acceptEvents = true;
+
 	private void OnTriggerEnter(Collider other) {
-		if(other == dieSpawner.dieCollider)
-			SceneManager.LoadScene(nextLevel);
+		if (acceptEvents && other == dieSpawner.dieCollider)
+			levelManager.NotifyGoalReached();
+	}
+
+	public void StopAcceptingEvents() {
+		acceptEvents = false;
 	}
 }

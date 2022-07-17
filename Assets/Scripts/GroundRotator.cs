@@ -19,6 +19,8 @@ public class GroundRotator : MonoBehaviour {
 	private PIDController pitchPID;
 	private PIDController rollPID;
 
+	private bool acceptEvents = true;
+
 	private void Start() {
 		die = dieSpawner.die.transform;
 
@@ -26,9 +28,9 @@ public class GroundRotator : MonoBehaviour {
 		rollPID = new PIDController(pidGains);
 	}
 	
-	void FixedUpdate() {
-		float pitchInput = Input.GetAxis("Vertical");
-		float rollInput = -Input.GetAxis("Horizontal");
+	private void FixedUpdate() {
+		float pitchInput = acceptEvents ? Input.GetAxis("Vertical") : 0.0f;
+		float rollInput = acceptEvents ? -Input.GetAxis("Horizontal") : 0.0f;
 
 		float pitchTarget = maxTilt * pitchInput;
 		float rollTarget = maxTilt * rollInput;
@@ -40,5 +42,9 @@ public class GroundRotator : MonoBehaviour {
 		this.transform.position = Vector3.zero;
 		this.transform.RotateAround(die.position, Vector3.right, pitch);
 		this.transform.RotateAround(die.position, Vector3.forward, roll);
+	}
+
+	public void StopAcceptingEvents() {
+		acceptEvents = false;
 	}
 }
