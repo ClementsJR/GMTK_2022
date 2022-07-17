@@ -1344,7 +1344,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8977169658711074075
 Transform:
   m_ObjectHideFlags: 0
@@ -1501,8 +1501,6 @@ MonoBehaviour:
   timerLabel: {fileID: 1912204264912643664}
   levelEndScreen: {fileID: 7404362530741533461}
   scoreLabel: {fileID: 3704510874370524919}
-  rotator: {fileID: 8977169657319184726}
-  goal: {fileID: 0}
 --- !u!1 &8977169659209960639
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,22 +9,21 @@ public class MenuController : MonoBehaviour {
 	public GameObject dieSelectScreen;
 	public GameObject instructionsScreen;
 	public GameObject creditsScreen;
-
 	public GameObject spaceDice;
-	public GameObject selectDice;
+
+	public string startingLevel = "Level 1-1";
 
 	public void StartBtnClicked() {
 		menuScreen.SetActive(false);
 		dieSelectScreen.SetActive(true);
 
 		spaceDice.SetActive(false);
-		selectDice.SetActive(true);
 	}
 
 	public void SelectDie(GameObject diePrefab) {
 		PersistentSettings.diePrefab = diePrefab;
 		PersistentSettings.useDefaultDie = false;
-		SceneManager.LoadScene("Level 1");
+		SceneManager.LoadScene(startingLevel);
 	}
 
 	public void InstructionsBtnClicked() {
@@ -44,6 +43,5 @@ public class MenuController : MonoBehaviour {
 		creditsScreen.SetActive(false);
 
 		spaceDice.SetActive(true);
-		selectDice.SetActive(false);
 	}
 }
